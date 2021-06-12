@@ -1,9 +1,9 @@
 {
-  "Authors": "Nick Smart",
+  "Authors": "Lizelive",
   "Version": "00000000-0000-0000-0000-000000000000",
   "ComponentId": {
-    "Guid": "805cf59c-3c5d-494c-9d08-8b4b52c24bee",
-    "Name": "ExampleMod"
+    "Guid": "597f5572-38f5-4b7a-975b-08c7607ede68",
+    "Name": "Nuclear Reactor"
   },
   "Description": "Has a code project within it and demonstrates how to add code to FTD."
 }

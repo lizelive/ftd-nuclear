@@ -129,7 +129,7 @@
           "Guid": "471450a3-89d2-4070-bd8d-efbcea12bb81",
           "Name": "Boilers"
         },
-        "IsValidReference": false
+        "IsValidReference": true
       },
       "ViewTheseOptions": true,
       "MatchCoreBlockOrientation": false,
@@ -172,16 +172,16 @@
       ],
       "VariableCount": 1
     },
-    "ClassName": "NuclearAllInOne"
+    "ClassName": "NuclearCoolingTower"
   },
   "ItemType": 0,
   "LowLevelOfDetailColor": "1,1,1,1",
-  "DisplayName": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_displayName#?!Nuclear Boiler",
-  "InventoryNameOverride": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_inventoryNameOverride#?!Nuclear Boiler",
+  "DisplayName": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_displayName#?!Cooling Tower",
+  "InventoryNameOverride": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_inventoryNameOverride#?!Cooling Tower",
   "InventoryCategoryNameOverride": "",
   "DisplayOnInventory": true,
   "InventoryXPosition": 6,
-  "InventoryYPosition": 6,
+  "InventoryYPosition": 7,
   "InventoryTabOrVariantId": {
     "Reference": {
       "Guid": "87a94c51-0d66-4dd3-ae9f-bc36de628cf7",
@@ -213,8 +213,8 @@
     "Material": 25000.0
   },
   "ComponentId": {
-    "Guid": "55d183fc-fb5e-47d2-98bd-7f7366deb809",
-    "Name": "Nuclear Boiler"
+    "Guid": "c96f4ab2-f47d-4ed1-901f-7dea134d0b74",
+    "Name": "Cooling Tower"
   },
-  "Description": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_description#?!A self contined Nuclear Boiler <color=cyan>Warning: Highly explosive.</color>"
+  "Description": "###NuclearBoiler.55d183fc-fb5e-47d2-98bd-7f7366deb809_description#?!Convert unwanted steam back into mats"
 }

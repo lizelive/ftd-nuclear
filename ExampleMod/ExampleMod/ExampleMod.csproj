@@ -126,9 +126,11 @@
     <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExampleModPlugin.cs" />
+    <Compile Include="NukeModPlugin.cs" />
     <Compile Include="NuclearAllInOne.cs" />
+    <Compile Include="NuclearCoolingTower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReactionControlSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

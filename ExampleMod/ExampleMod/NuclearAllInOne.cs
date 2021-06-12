@@ -18,18 +18,18 @@ namespace CultOfClang.NuclearReactor
         public new static ILocFile _locFile = Loc.GetFile("NuclearAllInOne");
         private bool _detonated;
         const float MultiplyerPowerDensity = 100; // normal is 15 real can do 100mw/m^3
-        const float HeatPerVolume = 40;
+        public const float HeatPerVolume = 40;
         private static float ExplosionDamage { get; } = 500000f;
         private static float ExplosionRadius { get; } = PayloadDerivedValues.GetExplosionRadius(ExplosionDamage);
         public float RtgVolume => MultiplyerPowerDensity * (float)this.item.SizeInfo.ArrayPositionsUsed;
-        public float SteamPerSecond => 1000 * (float)this.item.SizeInfo.ArrayPositionsUsed;
+        public float SteamPerSecond => 1000 * this.item.SizeInfo.ArrayPositionsUsed;
 
         protected override void AppendToolTip(ProTip tip)
         {
             base.AppendToolTip(tip);
-            tip.SetSpecial_Name(RTG._locFile.Get("SpecialName", "Simple Reactor", true), RTG._locFile.Get("SpecialDescription", "Nuclar Boiler generates endless steam using the power of the atom", true));
+            tip.SetSpecial_Name(_locFile.Get("SpecialName", "Simple Reactor", true), _locFile.Get("SpecialDescription", "Nuclar Boiler generates endless steam using the power of the atom", true));
             tip.InfoOnly = true;
-            tip.Add(Position.Middle, RTG._locFile.Format("Return_CreatesEnergyPer", "Creates <<{0} steam per second>>", SteamPerSecond));
+            tip.Add(Position.Middle, _locFile.Format("Return_CreatesEnergyPer", "Creates <<{0} steam per second>>", SteamPerSecond));
             if (this.StorageModule != null)
                 SteamSharedUiHelper.AppendPressureAndCapacityBar(tip, this.StorageModule);
         }
@@ -39,7 +39,7 @@ namespace CultOfClang.NuclearReactor
             base.StateChanged(change);
             if (change.IsAvailableToConstruct)
             {
-                this.MainConstruct.PowerUsageCreationAndFuelRestricted.RtgVolume += RtgVolume;
+                //this.MainConstruct.PowerUsageCreationAndFuelRestricted.RtgVolume += RtgVolume;
                 this.MainConstruct.HotObjectsRestricted.AddASimpleSourceOfBodyHeat(HeatChange);
                 this.MainConstruct.SchedulerRestricted.RegisterForFixedUpdate(Update);
 
@@ -48,7 +48,7 @@ namespace CultOfClang.NuclearReactor
             {
                 if (!change.IsLostToConstructOrConstructLost)
                     return;
-                this.MainConstruct.PowerUsageCreationAndFuelRestricted.RtgVolume -= RtgVolume;
+                //this.MainConstruct.PowerUsageCreationAndFuelRestricted.RtgVolume -= RtgVolume;
                 this.MainConstruct.HotObjectsRestricted.RemoveASimpleSourceofBodyHeat(HeatChange);
                 this.MainConstruct.SchedulerRestricted.UnregisterForFixedUpdate(Update);
 

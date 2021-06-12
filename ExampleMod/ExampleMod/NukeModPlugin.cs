@@ -15,7 +15,7 @@ namespace CultOfClang.NuclearReactor
     /// All code files using the GamePlugin or GamePlugin_PostLoad interfaces (no need to use both)
     /// will have their OnLoad method called when they are loaded by the plugin loader.
     /// </summary>
-    public class ExampleModPlugin : GamePlugin
+    public class NukeModPlugin : GamePlugin
     {
 
 
